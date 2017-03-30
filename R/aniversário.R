@@ -1,28 +1,28 @@
 #' @export
-aniversário <- function(x,y,z){
+aniversÃ¡rio <- function(x,y,z){
   
   
-  x <- readline("Dia do seu aniversário?(DD)    :")
+  x <- readline("Dia do seu aniversÃ¡rio?(DD)    :")
   
   if(is.na(as.numeric(x))){
-    stop("O valor fornecido não é válido. Por favor digite um número.")
+    stop("O valor fornecido nÃ£o Ã© vÃ¡lido. Por favor digite um nÃºmero.")
     return(x)
   }
   
   
   
-  y <- readline("Mês do seu aniversário?(MM)    :")
+  y <- readline("MÃªs do seu aniversÃ¡rio?(MM)    :")
   
   if(is.na(as.numeric(y))){
-    stop("O valor fornecido não é válido. Por favor digite um número.")
+    stop("O valor fornecido nÃ£o Ã© vÃ¡lido. Por favor digite um nÃºmero.")
     return(y)
   }
   
   
-  z <- readline("Ano do seu aniversário?(YYYY)    :")
+  z <- readline("Ano do seu aniversÃ¡rio?(YYYY)    :")
   
   if(is.na(as.numeric(z))){
-    stop("O valor fornecido não é válido. Por favor digite um número.")
+    stop("O valor fornecido nÃ£o Ã© vÃ¡lido. Por favor digite um nÃºmero.")
     return(z)
   }
   
@@ -36,12 +36,12 @@ aniversário <- function(x,y,z){
   hoje <- format(Sys.Date(), "%d-%m")
   ani3 <- format(ani2, "%d-%m")
   idade <- as.numeric(format(Sys.Date(), "%Y")) - z
-  fa <- paste0("Feliz aniversário! ", idade, " anos... está ficando velho, hein?")
+  fa <- paste0("Feliz aniversÃ¡rio! ", idade, " anos... estÃ¡ ficando velho, hein?")
   
   ani_agora <- strptime(ani3, format = "%d-%m")
   hoje2 <- strptime(hoje, format = "%d-%m")
-  a <- ifelse(hoje2 < ani_agora, paste0(round(abs(hoje2 - ani_agora), 1), " dia(s) até seu próximo aniversário!"), 
-              paste0(365 - (round(abs(hoje2 - ani_agora), 1)), " dia(s) até seu próximo aniversário!"))
+  a <- ifelse(hoje2 < ani_agora, paste0(round(abs(hoje2 - ani_agora), 1), " dia(s) atÃ© seu prÃ³ximo aniversÃ¡rio!"), 
+              paste0(365 - (round(abs(hoje2 - ani_agora), 1)), " dia(s) atÃ© seu prÃ³ximo aniversÃ¡rio!"))
   
   
   
@@ -54,3 +54,4 @@ aniversário <- function(x,y,z){
 
 }
 
+ 
