@@ -44,14 +44,14 @@ aniversário <- function(x,y,z){
               paste0(365 - (round(abs(hoje2 - ani_agora), 1)), " dia(s) até seu próximo aniversário!"))
   
   
+  ifelse(hoje == ani3, fa, a)
   
-  try(
-  if(hoje == ani3){
-    stop(print(fa))
-    return(a)},
-    silent = T)
-  
-
+#  try(
+#  if(hoje == ani3){
+#    stop(print(fa))
+#    return(a)},
+#    silent = T)
+ 
 }
 
  
